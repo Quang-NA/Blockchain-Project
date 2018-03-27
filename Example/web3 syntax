@@ -1,0 +1,42 @@
+// We have to install a lite-server in order for MetaMask to inject an instance of the Web3 API. If we don't, MetaMask will not work by just loading our index.html file into the browser straight from the hard drive.
+// npm install lite-server --save-dev
+
+// npm init
+// npm install ethereum/web3.js --save
+
+
+// add this under scripts to the package.json file
+	"scripts": {    
+	"dev": "lite-server"
+	},
+
+
+//Get user balance
+web3.eth.getBalance("0x281055Afc982d96fAB65b3a49cAc8b878184Cb16", "latest", function(error, result) {
+	if(error != null)
+		console.error(error)
+
+	var balance = Number(web3.fromWei(result, "ether")).toFixed(18);
+	console.log(balance);
+})
+
+
+//Get token balance at specified contract address
+var tiendientutokenContract = web3.eth.contract([{"constant": true, "inputs": [{"name": "_owner", "type": "address"} ], "name": "balanceOf", "outputs": [{"name": "balance", "type": "uint256"} ], "payable": false, "stateMutability": "view", "type": "function"}])
+var tiendientutoken = tiendientutokenContract.at("0x46348CeA7fee229EDe23735bd187db426BA74634")
+console.log(tiendientutoken);
+var address = "0xc35E3759485AD1d9dAC17a7f9096947BB60ca90F"
+var decimals = 18;
+
+tiendientutoken.balanceOf(address, function(error, result) {
+	if (error != null)
+		console.error(error)
+
+	var balanceUser = result/(Math.pow(10, decimals));
+	console.log(balanceUser.toFixed(18));
+})	
+
+
+
+
+
