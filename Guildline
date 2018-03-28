@@ -1,0 +1,37 @@
+1. Solidity Programming Ref: http://solidity.readthedocs.io/en/develop/solidity-in-depth.html
+	1/ Voting _ Bai tap.
+	2/ Token ERC20: 
+		https://www.ethereum.org
+		https://erc20token.sonnguyen.ws/en/latest/
+		smart contracts (Issue ERC20 token) / ICO (crowdsale) /
+	3/ Send/Transfer => Call
+	4/ Giao tiếp các smart contract:
+		Tạo 1 smart contract mới có thể dùng hàm transfer token của một smart contract khác. 
+
+2. 	Geth: https://geth.ethereum.org/downloads/ 
+	Mist: https://github.com/ethereum/mist/releases
+	Metamask Extension
+	Build Private Blockchain: https://github.com/Quang-NA/Ethereum-App/tree/master/private-network
+
+	Truffle Tuts: http://truffleframework.com/
+		http://truffleframework.com/tutorials/pet-shop (coi sau khi hoc video) (***)
+	Ganache - Private Blockchain: http://truffleframework.com/ganache
+
+3.	https://coursetro.com/courses/20/Developing-Ethereum-Smart-Contracts-for-Beginners (tuts viết được index.html giao tiếp với Ethereum Network) (*)
+	Video 17 parts
+
+
+4.	web3 and JSON API
+	web3: https://github.com/ethereum/wiki/wiki/JavaScript-API
+	JSON: https://github.com/ethereum/wiki/wiki/JSON-RPC
+	https://github.com/Quang-NA/Ethereum-App (App đấu giá, code smart contract + web3) (**)
+		1. Tạo private blockchain bằng geth.
+		2. Smart contract (đọc hiểu): Vì sao "pendingReturns[msg.sender] = 0;" trước lệnh if (chống tấn công đệ quy - https://medium.com/@gus_tavo_guim/reentrancy-attack-on-smart-contracts-how-to-identify-the-exploitable-and-an-example-of-an-attack-4470a2d8dfe4)
+		3. User không cần Metamask (cung cấp Private - thô) - advance (làm theo như myetherwallet)
+
+
+
+
+Ref:
+1. Vietnam Ethereum Network: https://github.com/thanhson1085/VET
+2. Solidity Docs: http://solidity.readthedocs.io/en/latest/installing-solidity.html
